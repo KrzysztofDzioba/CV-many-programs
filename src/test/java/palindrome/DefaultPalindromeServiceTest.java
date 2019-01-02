@@ -17,7 +17,7 @@ class DefaultPalindromeServiceTest {
     private static PalindromeService palindromeService;
 
     @BeforeAll
-    public static void setUp() {
+    static void setUp() {
         palindromeService = new DefaultPalindromeService();
     }
 
