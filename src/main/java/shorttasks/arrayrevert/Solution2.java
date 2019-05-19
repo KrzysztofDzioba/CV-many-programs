@@ -11,7 +11,6 @@ public class Solution2 {
         Integer[] integers1 = IntStream.of(2, 1, 5, 4, 3).boxed().toArray(Integer[]::new);
         List<Integer> list = Arrays.asList(integers1);
         Collections.reverse(list);
-        list.toArray(Integer[]::new);
         System.out.println(list.toString());
     }
 }
