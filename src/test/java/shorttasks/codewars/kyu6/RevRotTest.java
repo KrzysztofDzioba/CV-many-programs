@@ -1,4 +1,4 @@
-package codewars.kyu6;
+package shorttasks.codewars.kyu6;
 
 
 import org.junit.Test;
