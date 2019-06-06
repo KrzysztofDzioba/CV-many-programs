@@ -44,7 +44,7 @@ class RevRot {
 
     private static boolean sumOfCubesDivisibleBy2(String s) {
         char[] chars = s.toCharArray();
-        int [] intChars = new int[chars.length];
+        int[] intChars = new int[chars.length];
         for (int i = 0; i < chars.length; i++) {
             intChars[i] = (int) chars[i];
         }
@@ -62,15 +62,15 @@ class RevRot {
     }
 
     private static List<String> getStringChunks(String strng, int sz) {
-        if(sz <= 0)
+        if (sz <= 0)
             return List.of();
 
         List<String> chunks = new ArrayList<>();
         for (int i = 0; i < strng.length(); i = i + sz) {
             int calculatedEndIndex = i + sz;
-            if(calculatedEndIndex >= strng.length())
-                break;
-            chunks.add(strng.substring(i, calculatedEndIndex));
+            if (calculatedEndIndex <= strng.length()) {
+                chunks.add(strng.substring(i, calculatedEndIndex));
+            }
         }
         return chunks;
     }
@@ -79,6 +79,27 @@ class RevRot {
         StringBuilder stringBuilder = new StringBuilder(strToReverse);
         stringBuilder.reverse();
         return stringBuilder.toString();
+    }
+
+    public static void main(String[] args) {
+        String s1 = revRot("123456987654", 6);
+        String s2 = revRot("123456987653", 6);
+        String s3 = revRot("66443875", 4);
+        String s4 = revRot("66443875", 8);
+        String s5 = revRot("664438769", 8);
+        String s6 = revRot("123456779", 8);
+        String s7 = revRot("", 8);
+        String s8 = revRot("123456779", 0);
+        String s9 = revRot("563000655734469485", 4);
+        System.out.println(s1);
+        System.out.println(s2);
+        System.out.println(s3);
+        System.out.println(s4);
+        System.out.println(s5);
+        System.out.println(s6);
+        System.out.println(s7);
+        System.out.println(s8);
+        System.out.println(s9);
     }
 }
 
