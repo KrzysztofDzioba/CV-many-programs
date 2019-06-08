@@ -27,7 +27,7 @@ import java.util.stream.IntStream;
 
 class RevRot {
 
-    public static String revRot(String strng, int sz) {
+    static String revRot(String strng, int sz) {
         List<String> stringChunks = getStringChunks(strng, sz);
         StringBuilder builder = new StringBuilder();
 

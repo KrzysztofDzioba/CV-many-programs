@@ -3,7 +3,7 @@ package multithreading.exercises.myblockingqueue;
 import java.util.Random;
 
 /**
- * Task is to implement BlockingQueue without using a BlockingQueue data structure.
+ * Task is to implement producer & consumer issue without using a BlockingQueue data structure.
  */
 
 
